@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@graphql-codegen/cli": "^2.16.4",
+    "apollo-server-express": "^3.11.1",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "typescript": "^4.9.4",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "gen-types": "graphql-codegen --config codegen.yml",
+    "start": "ts-node server.ts",
+    "gen-client": "graphql-codegen --config app/src/graphql/codegen.yml"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.16.4",
+    "@graphql-codegen/typescript": "2.8.7",
+    "@graphql-codegen/typescript-resolvers": "2.7.12",
+    "@types/uuid": "^9.0.0",
+    "@graphql-codegen/client-preset": "1.2.6"
+  }
+}
