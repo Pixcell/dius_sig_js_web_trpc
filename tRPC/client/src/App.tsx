@@ -3,6 +3,8 @@ import { httpBatchLink } from '@trpc/client';
 import React, { useState } from 'react';
 import TodoList from './TodoList';
 import { trpc } from './utils/trpc';
+import './App.css';
+
 export function App() {
   const [queryClient] = useState(() => new QueryClient());
   const [trpcClient] = useState(() =>

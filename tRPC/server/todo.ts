@@ -1,8 +1,9 @@
 import type { Todo, TodoCreateRequest, TodoDeleteRequest } from './types';
 import { TRPCError } from '@trpc/server';
 import { v1 } from 'uuid';
+import { items } from './data/todo.json';
 
-let todos: Todo[] = [];
+let todos: Todo[] = items;
 
 export const get = ({ input }: { input: string }) => {
     const found = todos.find((todo => todo.id === input));
